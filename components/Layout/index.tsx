@@ -14,7 +14,7 @@ const Layout: FC<LayoutProps> = ({ children, font }) => {
   return (
     <div
       className={clsx(
-        'w-screen flex min-h-screen h-auto overflow-y-auto bg-violet-100',
+        'w-screen flex min-h-screen h-auto overflow-y-auto bg-violet-100 animate-fade-in-05',
         font.className
       )}
     >
