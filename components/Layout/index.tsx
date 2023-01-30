@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { NextFont } from '@next/font';
-import { Sider } from 'components';
+import { NavigationLink, NavigationMenu, Accordion, Sider } from '@/components';
+import { useComponentList } from '@/hooks';
 import clsx from 'clsx';
 import { FaReact } from 'react-icons/fa';
-import { NavigationLink, NavigationMenu, Accordion } from 'components';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -11,6 +11,29 @@ interface LayoutProps {
 }
 
 const Layout: FC<LayoutProps> = ({ children, font }) => {
+  const SiderContent = () => {
+    const componentList = useComponentList();
+    return (
+      <>
+        {componentList.map((section, i) => (
+          <Accordion
+            active={true}
+            text={section.classification}
+            key={`nav-accordion-${section.classification}${i}`}
+            toggleableContent={
+              <NavigationMenu
+                links={section.components.map((component) => ({
+                  text: component.name,
+                  href: component.path,
+                }))}
+              />
+            }
+          />
+        ))}
+      </>
+    );
+  };
+
   return (
     <div
       className={clsx(
@@ -19,24 +42,12 @@ const Layout: FC<LayoutProps> = ({ children, font }) => {
       )}
     >
       <Sider
-        Content={
-          <Accordion
-            text="components"
-            toggleableContent={
-              <NavigationMenu
-                links={[
-                  { text: 'components', href: '/components' },
-                  { text: 'components', href: '/components' },
-                ]}
-              />
-            }
-          />
-        }
+        Content={<SiderContent />}
         Title={
           <NavigationLink
             text="Facile UI"
             Icon={FaReact}
-            className="text-xl font-semibold"
+            className="text-xl font-semibold mb-2"
           />
         }
       />
