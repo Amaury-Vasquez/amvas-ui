@@ -1,6 +1,6 @@
 # facile-ui
 
-This is a user interface library created to be used in React JS applications. It is build using tailwind css and has highly customizable components.
+User interface library for React applications, created using tailwind css. It has a great list of highly customizable components.
 
 ## Status
 
