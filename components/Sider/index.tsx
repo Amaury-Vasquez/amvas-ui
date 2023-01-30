@@ -11,7 +11,7 @@ const Sider: FC<SiderProps> = ({ className, Content, Title }) => {
   return (
     <div
       className={clsx(
-        'flex flex-col gap-2 py-2 h-screen w-[250px] bg-violet-600',
+        'flex flex-col py-2 h-screen w-[250px] bg-violet-600 ',
         className
       )}
     >
