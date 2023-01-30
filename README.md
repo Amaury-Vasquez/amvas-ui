@@ -1,6 +1,6 @@
-# facile-ui
+# amvas-ui
 
-This is a user interface library created to be used in React JS applications. It is build using tailwind css and has highly customizable components.
+User interface library created to be used in React JS applications. Build using tailwind css, it has highly customizable components.
 
 ## Status
 
