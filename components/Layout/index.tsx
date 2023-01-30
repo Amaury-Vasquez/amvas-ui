@@ -14,7 +14,7 @@ const Layout: FC<LayoutProps> = ({ children, font }) => {
   const SiderContent = () => {
     const componentList = useComponentList();
     return (
-      <>
+      <div className="transition-[height] duration-1000 ease h-auto w-auto p-0 m-0">
         {componentList.map((section, i) => (
           <Accordion
             active={true}
@@ -30,7 +30,7 @@ const Layout: FC<LayoutProps> = ({ children, font }) => {
             }
           />
         ))}
-      </>
+      </div>
     );
   };
 
