@@ -1,7 +1,6 @@
 # amvas-ui
 
-User interface library created to be used in React JS applications. Build using tailwind css, it has highly customizable components.
-
+User interface library for React applications, created using tailwind css, it offers a great list of highly customizable components.
 ## Status
 
 In development.
