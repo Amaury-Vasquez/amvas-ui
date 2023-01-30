@@ -8,6 +8,7 @@ interface AccordionProps {
   className?: string;
   toggleableContent: JSX.Element;
   text: string;
+  active?: boolean;
   Icon?: IconType;
 }
 
@@ -15,9 +16,10 @@ const Accordion: FC<AccordionProps> = ({
   className,
   toggleableContent,
   text,
+  active = false,
   Icon = FaAngleDown,
 }) => {
-  const { isActive, willClose, handleClick } = useToggle();
+  const { isActive, willClose, handleClick } = useToggle(active);
 
   return (
     <div className={clsx('w-full h-auto flex flex-col relative', className)}>
