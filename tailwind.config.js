@@ -9,13 +9,17 @@ module.exports = {
     extend: {
       keyframes: {
         'scroll-down': {
-          '0%': { transform: 'translateY(-100%)' },
-          '70%': { transform: 'translateY(8px)' },
-          '100%': { transform: 'translateY(0)' },
+          '0%': { transform: 'translateY(-100%)', transform: 'scaleY(0)' },
+          '100%': { transform: 'translateY(0)', transform: 'scaleY(1)' },
+        },
+        'scroll-up': {
+          '0%': { transform: 'translateY(0)', transform: 'scaleY(1)' },
+          '100%': { transform: 'translateY(-100%)', transform: 'scaleY(0)' },
         },
       },
       animation: {
-        'to-bottom': 'scroll-down 1s ease-in-out',
+        'to-bottom': 'scroll-down 0.3s ease',
+        'to-top': 'scroll-up 0.3s ease',
       },
     },
   },

@@ -3,7 +3,7 @@ import { NextFont } from '@next/font';
 import { Sider } from 'components';
 import clsx from 'clsx';
 import { FaReact } from 'react-icons/fa';
-import { NavigationLink, NavigationMenu } from 'components';
+import { NavigationLink, NavigationMenu, Accordion } from 'components';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -20,11 +20,16 @@ const Layout: FC<LayoutProps> = ({ children, font }) => {
     >
       <Sider
         Content={
-          <NavigationMenu
-            links={[
-              { text: 'components', href: '/components' },
-              { text: 'components', href: '/components' },
-            ]}
+          <Accordion
+            text="components"
+            toggleableContent={
+              <NavigationMenu
+                links={[
+                  { text: 'components', href: '/components' },
+                  { text: 'components', href: '/components' },
+                ]}
+              />
+            }
           />
         }
         Title={
