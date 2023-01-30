@@ -16,10 +16,27 @@ module.exports = {
           '0%': { transform: 'translateY(0)', transform: 'scaleY(1)' },
           '100%': { transform: 'translateY(-100%)', transform: 'scaleY(0)' },
         },
+        'rotate-180': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(180deg)' },
+        },
+        'rotate-from-180': {
+          '0%': { transform: 'rotate(180deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+        'fade-in': {
+          '0%': { opacity: '0', filter: 'blur(5px)' },
+          '100%': { opacity: '1', filter: 'blur(0)' },
+        },
       },
       animation: {
         'to-bottom': 'scroll-down 0.3s ease',
         'to-top': 'scroll-up 0.3s ease',
+        'rotate-180': 'rotate-180 0.3s ease',
+        'rotate-from-180': 'rotate-from-180 0.3s ease',
+        'fade-in': 'fade-in 0.3s ease',
+        'fade-in-05': 'fade-in 0.5s ease',
+        'fade-in-1': 'fade-in 1s ease',
       },
     },
   },
