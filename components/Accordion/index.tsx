@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { IconType } from 'react-icons';
-import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
+import { FaAngleDown } from 'react-icons/fa';
 import { useToggle } from 'hooks';
 import clsx from 'clsx';
 
@@ -8,16 +8,14 @@ interface AccordionProps {
   className?: string;
   toggleableContent: JSX.Element;
   text: string;
-  ActiveIcon?: IconType;
-  InactiveIcon?: IconType;
+  Icon?: IconType;
 }
 
 const Accordion: FC<AccordionProps> = ({
   className,
   toggleableContent,
   text,
-  ActiveIcon = FaAngleUp,
-  InactiveIcon = FaAngleDown,
+  Icon = FaAngleDown,
 }) => {
   const { isActive, willClose, handleClick } = useToggle();
 
@@ -31,7 +29,12 @@ const Accordion: FC<AccordionProps> = ({
         onClick={handleClick}
       >
         {text}
-        {isActive ? <ActiveIcon /> : <InactiveIcon />}
+        <Icon
+          className={clsx(
+            isActive && 'animate-rotate-180 transform rotate-180',
+            willClose && 'animate-rotate-from-180 transform rotate-0'
+          )}
+        />
       </button>
       {isActive && (
         <div
