@@ -1,19 +1,18 @@
 import { FC } from 'react';
 import { IconType } from 'react-icons';
-import Link from 'next/link';
+import Link, { LinkProps } from 'next/link';
 import clsx from 'clsx';
 
-export interface NavigationLinkProps {
+export interface NavigationLinkProps extends LinkProps {
   text: string;
   className?: string;
-  href?: string;
   Icon?: IconType;
   iconRight?: boolean;
 }
 
 const NavigationLink: FC<NavigationLinkProps> = ({
   text,
-  href = '/',
+  href,
   Icon,
   iconRight,
   className,

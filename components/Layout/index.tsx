@@ -17,7 +17,6 @@ const Layout: FC<LayoutProps> = ({ children, font }) => {
       <div className="transition-[height] duration-1000 ease h-auto w-auto p-0 m-0">
         {componentList.map((section, i) => (
           <Accordion
-            active={true}
             text={section.classification}
             key={`nav-accordion-${section.classification}${i}`}
             toggleableContent={
@@ -37,21 +36,22 @@ const Layout: FC<LayoutProps> = ({ children, font }) => {
   return (
     <div
       className={clsx(
-        'w-screen flex min-h-screen h-auto overflow-y-auto bg-violet-100 animate-fade-in-05',
+        'w-screen flex min-h-screen h-auto overflow-y-auto bg-slate-100 animate-fade-in-05',
         font.className
       )}
     >
       <Sider
-        Content={<SiderContent />}
-        Title={
+        content={<SiderContent />}
+        title={
           <NavigationLink
+            href={'/'}
             text="Facile UI"
             Icon={FaReact}
             className="text-xl font-semibold mb-2"
           />
         }
       />
-      {children}
+      <div className="ml-[250px] p-4 w-full">{children}</div>
     </div>
   );
 };
