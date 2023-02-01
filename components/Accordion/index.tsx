@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { IconType } from 'react-icons';
-import { FaAngleDown } from 'react-icons/fa';
+import { FaCaretDown } from 'react-icons/fa';
 import { useToggle } from 'hooks';
 import clsx from 'clsx';
 
@@ -17,7 +17,7 @@ const Accordion: FC<AccordionProps> = ({
   toggleableContent,
   text,
   active = false,
-  Icon = FaAngleDown,
+  Icon = FaCaretDown,
 }) => {
   const { isActive, willClose, handleClick } = useToggle(active);
 
