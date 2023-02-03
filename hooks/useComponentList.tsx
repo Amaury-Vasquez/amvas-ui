@@ -19,6 +19,10 @@ export const useComponentList = () => {
         path: 'button',
       },
       {
+        name: 'icon button',
+        path: 'icon-button',
+      },
+      {
         name: 'separator',
         path: 'separator',
       },
