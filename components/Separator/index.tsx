@@ -8,9 +8,9 @@ interface SeparatorProps extends HTMLProps<HTMLHRElement> {
 
 const Separator: FC<SeparatorProps> = ({
   className,
-  color = 'bg-slate-300',
+  color = 'bg-neutral-100',
 }) => {
-  return <hr className={clsx('p-0 w-full h-[2px] my-2', color, className)} />;
+  return <hr className={clsx('p-0 w-full h-[2px]', color, className)} />;
 };
 
 export default Separator;
