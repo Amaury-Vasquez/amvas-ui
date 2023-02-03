@@ -1,4 +1,5 @@
 import { FC } from 'react';
+
 export interface ComponentSection {
   classification: string;
   components: ComponentInfo[];
@@ -7,7 +8,7 @@ export interface ComponentSection {
 export interface ComponentInfo {
   name: string;
   path: string;
-  Component?: FC;
+  Component?: FC<any>;
 }
 
 export const useComponentList = () => {
