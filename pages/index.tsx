@@ -39,7 +39,7 @@ export default function Home() {
             </Anchor>
             <Anchor
               className="px-8 font-semibold"
-              href="/get-started"
+              href="/components"
               variant="secondary"
             >
               Components overview
