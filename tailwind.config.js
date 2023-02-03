@@ -38,6 +38,11 @@ module.exports = {
         'fade-in-05': 'fade-in 0.5s ease',
         'fade-in-1': 'fade-in 1s ease',
       },
+      screens: {
+        tablet: '640px',
+        laptop: '1024px',
+        desktop: '1280px',
+      },
     },
   },
   plugins: [require('tailwind-scrollbar')],
