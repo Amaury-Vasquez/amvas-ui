@@ -1,6 +1,7 @@
 export { default as Accordion } from './Accordion';
 export { default as Article } from './Article';
 export { default as Anchor } from './Anchor';
+export { default as Button } from './Button';
 export * from './IconButton';
 export { default as Layout } from './Layout';
 export {
