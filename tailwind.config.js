@@ -16,6 +16,14 @@ module.exports = {
           '0%': { transform: 'translateY(0)', transform: 'scaleY(1)' },
           '100%': { transform: 'translateY(-100%)', transform: 'scaleY(0)' },
         },
+        'rotate-90': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(90deg)' },
+        },
+        'rotate-from-90': {
+          '0%': { transform: 'rotate(90deg)' },
+          '100%': { transform: 'rotate(0deg)' },
+        },
         'rotate-180': {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(180deg)' },
@@ -32,6 +40,8 @@ module.exports = {
       animation: {
         'to-bottom': 'scroll-down 0.3s ease',
         'to-top': 'scroll-up 0.3s ease',
+        'rotate-90': 'rotate-90 0.3s ease',
+        'rotate-from-90': 'rotate-from-90 0.3s ease',
         'rotate-180': 'rotate-180 0.3s ease',
         'rotate-from-180': 'rotate-from-180 0.3s ease',
         'fade-in': 'fade-in 0.3s ease',
