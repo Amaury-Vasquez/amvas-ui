@@ -12,10 +12,10 @@ interface LayoutProps {
 
 const Layout: FC<LayoutProps> = ({ children, font }) => {
   const SiderContent = () => {
-    const componentList = useComponentList();
+    const { navigationList } = useComponentList();
     return (
       <div className="transition-[height] duration-1000 ease h-auto w-auto p-0 m-0">
-        {componentList.map((section, i) => (
+        {navigationList.map((section, i) => (
           <Accordion
             text={section.classification}
             key={`nav-accordion-${section.classification}${i}`}
