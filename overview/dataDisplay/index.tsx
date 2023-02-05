@@ -1,46 +1,37 @@
-import { ComponentSection } from '@/overview';
+import { ComponentOverviewList } from '@/hooks';
 import { AccordionOverview } from './Accordion';
 import { ArticleOverview } from './Article';
 import { AvatarOverview } from './Avatar';
 import { CardOverview } from './Card';
 import { TabMenuOverview } from './TabMenu';
 
-export const dataDisplaySection: ComponentSection = {
+export const dataDisplaySection: ComponentOverviewList = {
   classification: 'data display',
   components: [
     {
       name: 'accordion',
       path: 'accordion',
-      Component: AccordionOverview,
+      Component: <AccordionOverview />,
     },
     {
       name: 'article',
       path: 'article',
-      Component: ArticleOverview,
+      Component: <ArticleOverview />,
     },
     {
       name: 'avatar',
       path: 'avatar',
-      Component: AvatarOverview,
+      Component: <AvatarOverview />,
     },
     {
       name: 'card',
       path: 'card',
-      Component: CardOverview,
+      Component: <CardOverview />,
     },
-    // {
-    //   name: 'carousel',
-    //   path: 'carousel',
-    //   Component: CarouselOverview,
-    // },
     {
       name: 'tab menu',
       path: 'tab-menu',
-      Component: TabMenuOverview,
+      Component: <TabMenuOverview />,
     },
-    // {
-    //   name: 'tag',
-    //   path: 'tag',
-    // },
   ],
 };
