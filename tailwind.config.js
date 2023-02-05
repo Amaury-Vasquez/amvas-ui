@@ -37,6 +37,10 @@ module.exports = {
           '0%': { opacity: '0', filter: 'blur(5px)' },
           '100%': { opacity: '1', filter: 'blur(0)' },
         },
+        spin: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
       },
       animation: {
         'to-bottom': 'scroll-down 0.3s ease',
@@ -48,6 +52,8 @@ module.exports = {
         'fade-in': 'fade-in 0.3s ease',
         'fade-in-05': 'fade-in 0.5s ease',
         'fade-in-1': 'fade-in 1s ease',
+        'spin-avg': 'spin 1s linear infinite',
+        'spin-fast': 'spin 0.5s linear infinite',
       },
       screens: {
         tablet: '640px',
