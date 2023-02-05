@@ -11,18 +11,16 @@ const Article: FC<ArticleProps> = ({
   className,
   children,
   textSize = 'base',
-}) => {
-  return (
-    <article
-      className={clsx(
-        'w-full h-full p-1 whitespace-normal text-slate-800',
-        `text-${textSize}`,
-        className
-      )}
-    >
-      {children}
-    </article>
-  );
-};
+}) => (
+  <article
+    className={clsx(
+      'w-full h-full p-1 whitespace-normal text-slate-800',
+      `text-${textSize}`,
+      className
+    )}
+  >
+    {children}
+  </article>
+);
 
 export default Article;
