@@ -19,12 +19,7 @@ const IconButton: FC<IconButtonProps> = ({
       type="button"
       {...props}
     >
-      <Icon
-        className={clsx(
-          'w-full h-full',
-          `text-[${iconColor}] fill-[${iconColor}]`
-        )}
-      />
+      <Icon color={iconColor} className="w-full h-full" />
     </button>
   );
 };
