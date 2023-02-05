@@ -1,18 +1,16 @@
 import { FC } from 'react';
 import { capitalize } from '@/utils/string';
 import { Card, Separator } from '@/components';
-import { componentList } from '.';
+import { ComponentOverviewList } from '@/hooks';
 
-const Overview: FC = () => {
-  const sections = componentList.map((section) => ({
-    classification: section.classification,
-    components: section.components.filter(
-      (component) => component.Component !== undefined
-    ),
-  }));
-  const renderSections = () =>
-    sections.map((section, i) => {
-      const { classification } = section;
+interface OverviewProps {
+  sections: ComponentOverviewList[];
+}
+
+const Overview: FC<OverviewProps> = ({ sections }) => (
+  <div className="flex flex-col gap-4">
+    {sections.map((section, i) => {
+      const { classification, components } = section;
       return (
         <div
           className="w-full h-auto flex flex-col gap-2"
@@ -23,24 +21,21 @@ const Overview: FC = () => {
           </span>
           <Separator />
           <div className="w-full h-auto grid grid-cols-5 items-center justify-center gap-2">
-            {section.components.map((component, j) =>
-              component.Component ? (
-                <Card
-                  title={capitalize(component.name)}
-                  href={`/components/${classification.replace(' ', '-')}/${
-                    component.path
-                  }`}
-                  key={classification + component.name + i + j}
-                  content={<component.Component />}
-                />
-              ) : null
-            )}
+            {components.map((component, j) => (
+              <Card
+                title={capitalize(component.name)}
+                href={`/components/${classification.replace(' ', '-')}/${
+                  component.path
+                }`}
+                key={classification + component.name + i + j}
+                content={component.Component}
+              />
+            ))}
           </div>
         </div>
       );
-    });
-
-  return <div className="flex flex-col gap-4">{renderSections()}</div>;
-};
+    })}
+  </div>
+);
 
 export default Overview;
