@@ -4,8 +4,14 @@ import { Card, Separator } from '@/components';
 import { componentList } from '.';
 
 const Overview: FC = () => {
+  const sections = componentList.map((section) => ({
+    classification: section.classification,
+    components: section.components.filter(
+      (component) => component.Component !== undefined
+    ),
+  }));
   const renderSections = () =>
-    componentList.map((section, i) => {
+    sections.map((section, i) => {
       const { classification } = section;
       return (
         <div
