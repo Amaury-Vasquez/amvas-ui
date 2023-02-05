@@ -1,8 +1,10 @@
-import { NextPage } from 'next';
 import Head from 'next/head';
-import Overview from '@/overview';
+import { Overview } from '@/overview';
+import { useComponentList } from '@/hooks';
 
-const Components: NextPage = () => {
+export default function Components() {
+  const { overviewList } = useComponentList();
+
   return (
     <>
       <Head>
@@ -13,9 +15,7 @@ const Components: NextPage = () => {
           content="Facile UI components overview, general, data display, data input, feedback, navigation, loaders"
         />
       </Head>
-      <Overview />
+      <Overview sections={overviewList} />
     </>
   );
-};
-
-export default Components;
+}
