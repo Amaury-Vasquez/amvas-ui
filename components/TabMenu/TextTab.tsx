@@ -1,0 +1,19 @@
+import { FC } from 'react';
+import clsx from 'clsx';
+import { TextTabProps } from '.';
+
+const TextTab: FC<TextTabProps> = ({ name, isActive, handleClick }) => (
+  <button
+    className={clsx(
+      'text-sm font-semibold focus:outline-none h-full w-fit px-3 py-2 hover:bg-neutral-200',
+      isActive
+        ? 'border-b-2 border-solid border-violet-800 rounded-t-md'
+        : 'border-b-2 border-solid border-transparent rounded-md'
+    )}
+    onClick={handleClick}
+  >
+    {name}
+  </button>
+);
+
+export default TextTab;
