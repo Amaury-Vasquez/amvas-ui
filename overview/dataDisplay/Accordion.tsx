@@ -1,21 +1,13 @@
 import { FC } from 'react';
-import { Accordion } from '@/components';
+import Image from 'next/image';
 
 export const AccordionOverview: FC = () => (
-  <Accordion
-    active
-    text="Accordion"
-    bordered
-    toggleableContent={
-      <div className="flex flex-col text-center gap-1 text-violet-800">
-        <span className="text-base italic border-b border-solid border-violet-600 py-1">
-          Section 1
-        </span>
-        <span className="text-base italic border-b border-solid border-violet-600 py-1">
-          Section 2
-        </span>
-        <span className="text-base italic py-1"> Section 3 </span>
-      </div>
-    }
-  />
+  <div className="w-48 h-32 relative rounded-md">
+    <Image
+      className="rounded-md"
+      src="https://i.imgur.com/rwLtgHS.png"
+      fill
+      alt="Accordion image"
+    />
+  </div>
 );

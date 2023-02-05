@@ -1,14 +1,8 @@
 import { FC } from 'react';
-import { Card } from '@/components';
+import Image from 'next/image';
 
 export const CardOverview: FC = () => (
-  <div className="w-full h-full flex items-start py-4 justify-center">
-    <Card
-      className="!shadow-xl"
-      height="100%"
-      href="/overview/data-display/card"
-      title="Card example"
-      content={<span> card example </span>}
-    />
+  <div className="w-full h-full flex rounded-sm relative">
+    <Image src={'https://i.imgur.com/Q4MHTQT.png'} fill alt="Card image" />
   </div>
 );
