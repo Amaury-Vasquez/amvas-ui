@@ -22,9 +22,9 @@ const Button: FC<ButtonProps> = ({
   const getVariantStyle = (variant: ButtonVariants) => {
     switch (variant) {
       case 'primary':
-        return 'p-2 w-auto text-white bg-violet-600 rounded';
+        return 'w-auto text-white bg-violet-600 rounded';
       case 'secondary':
-        return 'p-2 w-auto border border-violet-500 text-violet-500 rounded';
+        return 'w-auto border border-violet-500 text-violet-500 rounded';
       case 'base':
         return 'text-violet-500';
     }
@@ -35,6 +35,7 @@ const Button: FC<ButtonProps> = ({
       className={clsx(
         'text-base text-center',
         underlined && 'underline underline-offset-2',
+        variant !== 'base' && 'py-2 px-4',
         getVariantStyle(variant),
         className
       )}
