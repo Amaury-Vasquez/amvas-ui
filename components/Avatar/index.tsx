@@ -6,6 +6,8 @@ interface AvatarProps {
   src: string;
   alt: string;
   className?: string;
+  width?: number;
+  height?: number;
   size?: 'xs' | 'sm' | 'md' | 'lg';
   handleClick?: () => void;
 }
@@ -14,6 +16,8 @@ const Avatar: FC<AvatarProps> = ({
   src,
   alt,
   className,
+  height,
+  width,
   size = 'md',
   handleClick = () => {},
 }) => (
@@ -28,7 +32,14 @@ const Avatar: FC<AvatarProps> = ({
     )}
     onClick={handleClick}
   >
-    <Image src={src} alt={alt} fill className="rounded-full hover:opacity-80" />
+    <Image
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      fill
+      className="rounded-full hover:opacity-80"
+    />
   </button>
 );
 
