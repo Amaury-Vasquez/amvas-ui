@@ -25,7 +25,7 @@ const Card: FC<CardProps> = ({
       target={target}
       className={clsx(
         'w-full bg-white shadow-sm rounded-md flex flex-col border-b border-solid border-neutral-100',
-        height ? `h-[${height}]` : 'h-52',
+        height ? `h-[${height}]` : 'h-64',
         className
       )}
     >
