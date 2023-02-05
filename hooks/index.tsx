@@ -1,2 +1,6 @@
 export { useToggle } from './useToggle';
-export { useComponentList } from './useComponentList';
+export {
+  useComponentList,
+  type ComponentNavigationList,
+  type ComponentOverviewList,
+} from './useComponentList';

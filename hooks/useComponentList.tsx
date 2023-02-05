@@ -1,12 +1,44 @@
-import { componentList } from '@/overview';
+import { ReactNode } from 'react';
+import { dataDisplaySection, generalSection } from '@/overview';
+
+interface ComponentInfo {
+  name: string;
+  path: string;
+}
+
+interface ComponentOverview extends ComponentInfo {
+  name: string;
+  path: string;
+  Component: ReactNode;
+}
+
+export interface ComponentTemplate {
+  name: string;
+  path: string;
+  Component?: ReactNode;
+}
+
+export interface ComponentNavigationList {
+  classification: string;
+  components: ComponentInfo[];
+}
+
+export interface ComponentOverviewList {
+  classification: string;
+  components: ComponentOverview[];
+}
 
 export const useComponentList = () => {
-  const list = componentList.map((section) => ({
-    classification: section.classification,
-    components: section.components.map((component) => ({
-      name: component.name,
-      path: component.path,
-    })),
-  }));
-  return list;
+  const overviewList: ComponentOverviewList[] = [
+    generalSection,
+    dataDisplaySection,
+  ];
+  const navigationList: ComponentNavigationList[] = overviewList.map(
+    ({ classification, components }) => ({
+      classification,
+      components: components.map(({ name, path }) => ({ name, path })),
+    })
+  );
+
+  return { navigationList, overviewList };
 };
