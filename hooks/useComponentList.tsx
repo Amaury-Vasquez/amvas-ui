@@ -1,5 +1,9 @@
 import { ReactNode } from 'react';
-import { dataDisplaySection, generalSection } from '@/overview';
+import {
+  dataDisplaySection,
+  generalSection,
+  dataInputSection,
+} from '@/overview';
 
 interface ComponentInfo {
   name: string;
@@ -32,6 +36,7 @@ export const useComponentList = () => {
   const overviewList: ComponentOverviewList[] = [
     generalSection,
     dataDisplaySection,
+    dataInputSection,
   ];
   const navigationList: ComponentNavigationList[] = overviewList.map(
     ({ classification, components }) => ({
