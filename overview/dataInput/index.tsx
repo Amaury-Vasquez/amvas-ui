@@ -1,51 +1,53 @@
-import { ComponentSection } from '@/overview';
+import { ComponentOverviewList } from '@/hooks';
+import InputOverview from './Input';
+import UploadOverview from './Upload';
+import SliderOverview from './Slider';
 
-// export const dataInputSection: ComponentSection = {
-//   classification: 'data input',
-//   components: [
-//     {
-//       name: 'auth form',
-//       path: 'auth-form',
-//     },
-//     {
-//       name: 'checkbox',
-//       path: 'checkbox',
-//     },
-//     {
-//       name: 'date picker',
-//       path: 'date-picker',
-//     },
-//     {
-//       name: 'form',
-//       path: 'form',
-//     },
-//     {
-//       name: 'radio',
-//       path: 'radio',
-//     },
-//     {
-//       name: 'rate',
-//       path: 'rate',
-//     },
-//     {
-//       name: 'input',
-//       path: 'input',
-//     },
-//     {
-//       name: 'select',
-//       path: 'select',
-//     },
-//     {
-//       name: 'slider',
-//       path: 'slider',
-//     },
-//     {
-//       name: 'switch',
-//       path: 'switch',
-//     },
-//     {
-//       name: 'upload',
-//       path: 'upload',
-//     },
-//   ],
-// };
+export const dataInputSection: ComponentOverviewList = {
+  classification: 'data input',
+  components: [
+    //   {
+    //     name: 'checkbox',
+    //     path: 'checkbox',
+    //   },
+    //   {
+    //     name: 'date picker',
+    //     path: 'date-picker',
+    //   },
+    //   {
+    //     name: 'form',
+    //     path: 'form',
+    //   },
+    //   {
+    //     name: 'radio',
+    //     path: 'radio',
+    //   },
+    //   {
+    //     name: 'rate',
+    //     path: 'rate',
+    //   },
+    {
+      name: 'input',
+      path: 'input',
+      Component: <InputOverview />,
+    },
+    //   {
+    //     name: 'select',
+    //     path: 'select',
+    //   },
+    {
+      name: 'slider',
+      path: 'slider',
+      Component: <SliderOverview />,
+    },
+    //   {
+    //     name: 'switch',
+    //     path: 'switch',
+    //   },
+    {
+      name: 'upload',
+      path: 'upload',
+      Component: <UploadOverview />,
+    },
+  ],
+};
