@@ -6,14 +6,17 @@ export { default as Button } from './Button';
 export { default as Card } from './Card';
 export { default as Carousel } from './Carousel';
 export * from './IconButton';
+export { TextInput, Upload } from './Input';
 export { default as Layout } from './Layout';
 export {
   default as NavigationLink,
   type NavigationLinkProps,
 } from './NavigationLink';
 export { default as NavigationMenu } from './NavigationMenu';
+export { default as Select } from './Select';
 export { default as Separator } from './Separator';
 export { default as Sider } from './Sider';
+export { default as Slider } from './Slider';
 export {
   default as TabMenu,
   TextTab,
