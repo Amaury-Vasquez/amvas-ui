@@ -1,3 +1,4 @@
+export { default as AppLayout } from './AppLayout';
 export { default as Accordion } from './Accordion';
 export { default as Article } from './Article';
 export { default as Anchor } from './Anchor';
@@ -5,9 +6,10 @@ export { default as Avatar } from './Avatar';
 export { default as Button } from './Button';
 export { default as Card } from './Card';
 export { default as Carousel } from './Carousel';
+export { default as Header } from './Header';
 export * from './IconButton';
 export { TextInput, Upload } from './Input';
-export { default as Layout } from './Layout';
+export { default as Modal } from './Modal';
 export {
   default as NavigationLink,
   type NavigationLinkProps,
