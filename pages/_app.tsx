@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
 import { Source_Sans_Pro } from '@next/font/google';
-import { Layout } from 'components';
+import { AppLayout } from 'components';
 import 'tailwindcss/tailwind.css';
 import 'styles/globals.css';
 
@@ -13,8 +13,8 @@ const sans = Source_Sans_Pro({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Layout font={sans}>
+    <AppLayout font={sans}>
       <Component {...pageProps} />
-    </Layout>
+    </AppLayout>
   );
 }
