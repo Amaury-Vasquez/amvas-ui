@@ -20,7 +20,7 @@ const Overview: FC<OverviewProps> = ({ sections }) => (
             {capitalize(classification)}
           </span>
           <Separator />
-          <div className="w-full h-auto grid grid-cols-5 items-center justify-center gap-2">
+          <div className="w-full h-auto grid grid-cols-5 items-center justify-center gap-2 py-2">
             {components.map((component, j) => (
               <Card
                 title={capitalize(component.name)}
