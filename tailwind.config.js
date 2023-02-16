@@ -52,6 +52,14 @@ module.exports = {
           '0%': { opacity: '1', filter: 'blur(0)' },
           '100%': { opacity: '0', filter: 'blur(5px)' },
         },
+        'toggle-left': {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        'toggle-right': {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
         spin: {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(360deg)' },
@@ -72,8 +80,11 @@ module.exports = {
         'fade-out': 'fade-out 0.3s ease',
         'spin-avg': 'spin 1s linear infinite',
         'spin-fast': 'spin 0.5s linear infinite',
+        'toggle-left': 'toggle-left 0.2s ease',
+        'toggle-right': 'toggle-right 0.2s ease',
       },
       screens: {
+        mobile: '500px',
         tablet: '640px',
         laptop: '1024px',
         desktop: '1280px',
