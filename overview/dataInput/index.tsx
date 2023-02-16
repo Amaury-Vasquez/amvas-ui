@@ -2,6 +2,7 @@ import { ComponentOverviewList } from '@/hooks';
 import InputOverview from './Input';
 import UploadOverview from './Upload';
 import SliderOverview from './Slider';
+import SwitchOverview from './Switch';
 
 export const dataInputSection: ComponentOverviewList = {
   classification: 'data input',
@@ -40,10 +41,11 @@ export const dataInputSection: ComponentOverviewList = {
       path: 'slider',
       Component: <SliderOverview />,
     },
-    //   {
-    //     name: 'switch',
-    //     path: 'switch',
-    //   },
+    {
+      name: 'switch',
+      path: 'switch',
+      Component: <SwitchOverview />,
+    },
     {
       name: 'upload',
       path: 'upload',
