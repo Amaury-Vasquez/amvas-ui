@@ -36,7 +36,8 @@ const AppLayout: FC<LayoutProps> = ({ children, font }) => {
           <span className="flex items-center justify-center w-fit h-full text-xl text-neutral-800 font-semibold">
             {router.pathname === '/'
               ? 'Facile UI'
-              : capitalize(
+              : router.pathname !== '_error' &&
+                capitalize(
                   router.pathname.replace('/', '').split('-').join(' ')
                 )}
           </span>
