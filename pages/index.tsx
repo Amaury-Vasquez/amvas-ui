@@ -14,8 +14,8 @@ export default function Home() {
           highly customizable components"
         />
       </Head>
-      <main className="p-9 w-full h-auto m-auto flex flex-col items-center justify-start">
-        <Article className="w-full desktop:w-[50%]">
+      <main className="p-9 max-mobile:p-0 w-full h-auto m-auto flex flex-col items-center justify-start">
+        <Article className="w-full laptop:w-[50%] tabletXL:w-[80%]">
           <h1 className="text-4xl font-bold text-center">
             Speed up your development process using highly customizable react
             components.
