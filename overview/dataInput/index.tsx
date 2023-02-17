@@ -3,6 +3,7 @@ import InputOverview from './Input';
 import UploadOverview from './Upload';
 import SliderOverview from './Slider';
 import SwitchOverview from './Switch';
+import RateOverview from './Rate';
 
 export const dataInputSection: ComponentOverviewList = {
   classification: 'data input',
@@ -23,10 +24,11 @@ export const dataInputSection: ComponentOverviewList = {
     //     name: 'radio',
     //     path: 'radio',
     //   },
-    //   {
-    //     name: 'rate',
-    //     path: 'rate',
-    //   },
+    {
+      name: 'rate',
+      path: 'rate',
+      Component: <RateOverview />,
+    },
     {
       name: 'input',
       path: 'input',

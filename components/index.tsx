@@ -15,6 +15,7 @@ export {
   type NavigationLinkProps,
 } from './NavigationLink';
 export { default as NavigationMenu } from './NavigationMenu';
+export { default as Rate } from './Rate';
 export { default as Select } from './Select';
 export { default as Separator } from './Separator';
 export { default as Sider } from './Sider';
