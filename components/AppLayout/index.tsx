@@ -71,7 +71,9 @@ const AppLayout: FC<LayoutProps> = ({ children, font }) => {
           />
         </Modal>
       )}
-      <div className={clsx('p-6 w-full mt-12')}>{children}</div>
+      <div className={clsx('p-6 max-mobileXS:p-1 w-full mt-12')}>
+        {children}
+      </div>
     </div>
   );
 };

@@ -33,7 +33,7 @@ const Button: FC<ButtonProps> = ({
   return (
     <button
       className={clsx(
-        'text-base text-center',
+        'text-base text-center overflow-x-hidden',
         underlined && 'underline underline-offset-2',
         variant !== 'base' && 'py-2 px-4',
         getVariantStyle(variant),
