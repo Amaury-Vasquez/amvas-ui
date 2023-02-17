@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       colors: {
         'transparent-black': 'rgba(0, 0, 0, 0.3)',
+        'transparent-white': 'rgba(255, 255, 255, 0.3)',
       },
       keyframes: {
         'scroll-down': {

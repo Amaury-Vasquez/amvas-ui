@@ -3,13 +3,13 @@ import { useRouter } from 'next/router';
 import { NextFont } from '@next/font';
 import { FC } from 'react';
 import { FaReact } from 'react-icons/fa';
-import { AiOutlineClose } from 'react-icons/ai';
 import HeaderLinks from './HeaderLinks';
 import Menu from './Menu';
 import SiderContent from './SiderContent';
-import { Header, IconButton, Modal, NavigationLink, Sider } from '@/components';
+import { Header, Modal, NavigationLink, Sider } from '@/components';
 import { useToggle } from '@/hooks';
 import { capitalize } from '@/utils/string';
+import CloseButton from './CloseButton';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -60,12 +60,7 @@ const AppLayout: FC<LayoutProps> = ({ children, font }) => {
                   Icon={FaReact}
                   className="text-xl font-semibold"
                 />
-                <IconButton
-                  Icon={AiOutlineClose}
-                  hoverColor="bg-violet-200"
-                  iconColor="#fff"
-                  onClick={handleClick}
-                />
+                <CloseButton isClosing={willClose} handleClose={handleClick} />
               </div>
             }
             handleClose={handleBlur}
