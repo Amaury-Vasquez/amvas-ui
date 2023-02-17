@@ -4,6 +4,7 @@ import UploadOverview from './Upload';
 import SliderOverview from './Slider';
 import SwitchOverview from './Switch';
 import RateOverview from './Rate';
+import SelectOverview from './Select';
 
 export const dataInputSection: ComponentOverviewList = {
   classification: 'data input',
@@ -15,10 +16,6 @@ export const dataInputSection: ComponentOverviewList = {
     //   {
     //     name: 'date picker',
     //     path: 'date-picker',
-    //   },
-    //   {
-    //     name: 'form',
-    //     path: 'form',
     //   },
     //   {
     //     name: 'radio',
@@ -34,10 +31,11 @@ export const dataInputSection: ComponentOverviewList = {
       path: 'input',
       Component: <InputOverview />,
     },
-    //   {
-    //     name: 'select',
-    //     path: 'select',
-    //   },
+    {
+      name: 'select',
+      path: 'select',
+      Component: <SelectOverview />,
+    },
     {
       name: 'slider',
       path: 'slider',
