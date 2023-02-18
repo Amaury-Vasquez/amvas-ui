@@ -18,7 +18,11 @@ const IconButton: FC<IconButtonProps> = ({
 }) => {
   return (
     <button
-      className={clsx('p-1 rounded-full', `hover:${hoverColor}`, className)}
+      className={clsx(
+        'p-2 rounded-full transition-colors',
+        `hover:${hoverColor}`,
+        className
+      )}
       type="button"
       {...props}
     >
