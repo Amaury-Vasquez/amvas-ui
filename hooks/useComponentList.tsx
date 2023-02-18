@@ -3,6 +3,7 @@ import {
   dataDisplaySection,
   generalSection,
   dataInputSection,
+  loadersSection,
 } from '@/overview';
 
 interface ComponentInfo {
@@ -37,6 +38,7 @@ export const useComponentList = () => {
     generalSection,
     dataDisplaySection,
     dataInputSection,
+    loadersSection,
   ];
   const navigationList: ComponentNavigationList[] = overviewList.map(
     ({ classification, components }) => ({
