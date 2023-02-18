@@ -6,4 +6,4 @@ export { dataDisplaySection } from './dataDisplay';
 export { dataInputSection } from './dataInput';
 // import { feedbackSection } from './feedback';
 // import { navigationSection } from './navigation';
-// import { loadersSection } from './loaders';
+export { loadersSection } from './loaders';
