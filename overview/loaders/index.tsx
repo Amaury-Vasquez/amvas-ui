@@ -1,20 +1,23 @@
-export { SpinOverview } from './Spin';
+import { ComponentOverviewList } from '@/hooks';
+import SpinOverview from './Spin';
+import BounceOverview from './Bounce';
 
-// export const loadersSection: ComponentSection = {
-//   classification: 'loaders',
-//   components: [
-//     {
-//       name: 'bounce',
-//       path: 'bounce',
-//     },
-//     {
-//       name: 'skeleton',
-//       path: 'skeleton',
-//     },
-//     {
-//       name: 'spin',
-//       path: 'spin',
-//       Component: SpinOverview,
-//     },
-//   ],
-// };
+export const loadersSection: ComponentOverviewList = {
+  classification: 'loaders',
+  components: [
+    {
+      name: 'bounce',
+      path: 'bounce',
+      Component: <BounceOverview />,
+    },
+    // {
+    //   name: 'skeleton',
+    //   path: 'skeleton',
+    // },
+    {
+      name: 'spin',
+      path: 'spin',
+      Component: <SpinOverview />,
+    },
+  ],
+};
