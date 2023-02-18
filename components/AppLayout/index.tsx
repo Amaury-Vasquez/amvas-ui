@@ -33,7 +33,7 @@ const AppLayout: FC<LayoutProps> = ({ children, font }) => {
       <Header
         left={<Menu isActive={isActive} onMenuClick={handleClick} />}
         middle={
-          <span className="flex items-center justify-center w-fit h-full text-xl text-neutral-800 font-semibold">
+          <span className="flex items-center justify-center w-fit h-full text-xl text-neutral-800">
             {router.pathname === '/'
               ? 'Facile UI'
               : router.pathname !== '_error' &&
