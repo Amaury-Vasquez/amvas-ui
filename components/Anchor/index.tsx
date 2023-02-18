@@ -1,6 +1,7 @@
 import { FC, ReactNode } from 'react';
 import Link, { LinkProps } from 'next/link';
 import clsx from 'clsx';
+import { TargetTypes } from '@/interfaces';
 
 type LinkVariants = 'primary' | 'secondary' | 'base';
 
@@ -11,6 +12,7 @@ export interface AnchorProps extends LinkProps {
   href: string;
   variant?: LinkVariants;
   underlined?: boolean;
+  target?: TargetTypes;
 }
 
 const Anchor: FC<AnchorProps> = ({
