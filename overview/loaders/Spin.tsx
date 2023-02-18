@@ -1,8 +1,10 @@
 import { FC } from 'react';
 import { Spin } from '@/components/Loaders';
 
-export const SpinOverview: FC = () => (
-  <div className="flex flex-col w-full h-full gap-4">
+const SpinOverview: FC = () => (
+  <div className="flex w-full h-full gap-4 items-center justify-center">
     <Spin />
   </div>
 );
+
+export default SpinOverview;
