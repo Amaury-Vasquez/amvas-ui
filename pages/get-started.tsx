@@ -6,10 +6,41 @@ import {
   Article,
   CopyableText,
   IconButtonLink,
+  IconButtonLinkProps,
   Separator,
 } from '@/components';
 
 export default function GetStarted() {
+  const renderTitle = (text: string) => (
+    <h1 className="text-2xl mb-2 font-semibold"> {text} </h1>
+  );
+
+  const renderSubtitle = (text: string) => (
+    <h2 className="text-xl mt-4 mb-2 font-semibold"> {text}</h2>
+  );
+
+  const commonTextStyle = 'my-2 text-lg text-justify';
+
+  const socialMediaLinks: IconButtonLinkProps[] = [
+    {
+      Icon: FaLinkedin,
+      href: 'https://www.linkedin.com/in/amaury-vasquez-9a1b3a240/',
+      target: '_blank',
+      iconColor: '#0a66c2',
+    },
+    {
+      Icon: FaGithub,
+      href: 'https://github.com/Amaury-Vasquez/facile-ui',
+      target: '_blank',
+      iconColor: '#333',
+    },
+    {
+      Icon: FaMailBulk,
+      href: 'mailto:amaury.vasquezenriquez@gmail.com',
+      iconColor: '#cb3a2f',
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -21,9 +52,9 @@ export default function GetStarted() {
       </Head>
       <main className="w-full h-auto p-0 m-0 flex justify-center">
         <Article className="laptop:w-[60%] ">
-          <h1 className="text-2xl mb-2 font-semibold"> Getting started </h1>
+          {renderTitle('Get started')}
           <Separator />
-          <p className="my-2 text-lg text-justify">
+          <p className={commonTextStyle}>
             Facile UI main purpose is to create components that can be easily
             used and customized, in any project that uses React and Typescript.
             In order to achieve this, the easiest way of using Facile UI is by
@@ -34,10 +65,8 @@ export default function GetStarted() {
             less code when creating projects.
           </p>
           <Separator />
-          <h2 className="text-xl mt-4 mb-2 font-semibold">
-            1. Download repository
-          </h2>
-          <p className="my-2 text-lg text-justify">
+          {renderSubtitle('1. Download repository')}
+          <p className={commonTextStyle}>
             You can go directly to the project repository page on{' '}
             <Anchor
               href="https://github.com/Amaury-Vasquez/facile-ui"
@@ -53,26 +82,22 @@ export default function GetStarted() {
             className="shadow-sm rounded-md mt-2 w-full bg-transparent-white border border-violet-100 border-solid"
             text="git clone https://github.com/Amaury-Vasquez/facile-ui.git"
           />
-          <h2 className="text-xl mt-4 mb-2 font-semibold">
-            2. Install dependencies {'(optional)'}.
-          </h2>
-          <p className="my-2 text-lg text-justify">
+          {renderSubtitle('2. Install dependencies (optional)')}
+          <p className={commonTextStyle}>
             Once you have the repository on your computer, you can install the
             dependencies and run the project to overview the components and try
             them on the browser.
           </p>
-          <h2 className="text-xl mt-4 mb-2 font-semibold">
-            3. Use the components
-          </h2>
-          <p className="my-2 text-lg text-justify">
+          {renderSubtitle('3. Use the components')}
+          <p className={commonTextStyle}>
             If you just want to use a single component, you can paste the
             corresponding folder inside your project, or if you want to use all
             of them, I advice you to copy the components folder inside your
             project. All of them are already exported on the index file.
           </p>
           <Separator className="mt-2" />
-          <h1 className="text-2xl mt-4 mb-2 font-semibold">Additional steps</h1>
-          <p className="my-2 text-lg text-justify">
+          {renderTitle('Additional steps')}
+          <p className={commonTextStyle}>
             If you are interested on using Facile UI components, please give a
             star to the project on{' '}
             <Anchor
@@ -89,27 +114,13 @@ export default function GetStarted() {
             You can reach out to me on linkedin, github or via email.
           </p>
           <div className="w-full h-auto flex mt-4 items-center justify-center gap-4">
-            <IconButtonLink
-              target="_blank"
-              href="https://www.linkedin.com/in/amaury-vasquez-9a1b3a240/"
-              className="w-12 h-12"
-              Icon={FaLinkedin}
-              iconColor="#0a66c2"
-            />
-
-            <IconButtonLink
-              target="_blank"
-              href="https://github.com/Amaury-Vasquez/facile-ui"
-              className="w-12 h-12"
-              Icon={FaGithub}
-              iconColor="#000"
-            />
-            <IconButtonLink
-              href="mailto:amaury.vasquezenriquez@gmail.com"
-              className="w-12 h-12"
-              Icon={FaMailBulk}
-              iconColor="#cb3a2f"
-            />
+            {socialMediaLinks.map((atrributes, i) => (
+              <IconButtonLink
+                className="w-12 h-12"
+                key={'contact-social-media-link' + i}
+                {...atrributes}
+              />
+            ))}
           </div>
         </Article>
       </main>
