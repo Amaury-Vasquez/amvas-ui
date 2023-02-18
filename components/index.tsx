@@ -6,6 +6,7 @@ export { default as Avatar } from './Avatar';
 export { default as Button } from './Button';
 export { default as Card } from './Card';
 export { default as Carousel } from './Carousel';
+export { default as CopyableText } from './CopyableText';
 export { default as Header } from './Header';
 export * from './IconButton';
 export { TextInput, Upload } from './Input';
@@ -29,3 +30,4 @@ export {
   type IconTabProps,
   type TextTabProps,
 } from './TabMenu';
+export * from './Loaders';
