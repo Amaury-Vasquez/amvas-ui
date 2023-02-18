@@ -4,7 +4,7 @@ import { TargetTypes } from '@/interfaces';
 import IconButton from './IconButton';
 import { IconCommonProps } from '.';
 
-interface IconButtonLinkProps extends LinkProps, IconCommonProps {
+export interface IconButtonLinkProps extends LinkProps, IconCommonProps {
   target?: TargetTypes;
 }
 

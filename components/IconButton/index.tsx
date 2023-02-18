@@ -6,5 +6,8 @@ export interface IconCommonProps {
   iconColor?: string;
 }
 
-export { default as IconButton } from './IconButton';
-export { default as IconButtonLink } from './IconButtonLink';
+export { default as IconButton, type IconButtonProps } from './IconButton';
+export {
+  default as IconButtonLink,
+  type IconButtonLinkProps,
+} from './IconButtonLink';

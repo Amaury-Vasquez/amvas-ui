@@ -2,7 +2,7 @@ import { FC, HTMLProps } from 'react';
 import clsx from 'clsx';
 import { IconCommonProps } from '.';
 
-interface IconButtonProps
+export interface IconButtonProps
   extends HTMLProps<HTMLButtonElement>,
     IconCommonProps {
   hoverColor?: string;
