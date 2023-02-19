@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import { IconType } from 'react-icons';
 import { FaAngleRight } from 'react-icons/fa';
 import { useToggle } from 'hooks';
@@ -6,7 +6,7 @@ import clsx from 'clsx';
 
 interface AccordionProps {
   className?: string;
-  toggleableContent: JSX.Element;
+  toggleableContent: ReactNode;
   bordered?: boolean;
   text: string;
   filled?: boolean;
