@@ -1,8 +1,10 @@
 import { FC } from 'react';
-import Image from 'next/image';
 
 export const CardOverview: FC = () => (
-  <div className="w-full h-full flex rounded-sm relative">
-    <Image src={'https://i.imgur.com/Q4MHTQT.png'} fill alt="Card image" />
+  <div className="w-full h-full flex items-center justify-center">
+    <span className="text-slate-800 text-lg">
+      {' '}
+      All components are presented in cards!{' '}
+    </span>
   </div>
 );
