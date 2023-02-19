@@ -12,6 +12,7 @@ const IconButton: FC<IconButtonProps> = ({
   Icon,
   iconColor,
   className,
+  children,
   hoverColor = 'bg-gray-200',
   type = 'button',
   ...props
@@ -27,6 +28,7 @@ const IconButton: FC<IconButtonProps> = ({
       {...props}
     >
       <Icon color={iconColor} className="w-full h-full" />
+      {children && children}
     </button>
   );
 };
