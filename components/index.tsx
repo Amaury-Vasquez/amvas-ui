@@ -1,6 +1,6 @@
 export { default as AppLayout } from './AppLayout';
 export { default as Accordion } from './Accordion';
-export { default as Article } from './Article';
+export { Article, DocsArticle } from './Article';
 export { default as Anchor } from './Anchor';
 export { default as Avatar } from './Avatar';
 export { default as Button } from './Button';

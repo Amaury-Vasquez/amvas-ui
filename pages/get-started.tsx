@@ -1,9 +1,8 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import { FaLinkedin, FaGithub, FaMailBulk } from 'react-icons/fa';
 import {
   Anchor,
-  Article,
+  DocsArticle,
   CopyableText,
   IconButtonLink,
   IconButtonLinkProps,
@@ -51,7 +50,7 @@ export default function GetStarted() {
         />
       </Head>
       <main className="w-full h-auto p-0 m-0 flex justify-center">
-        <Article className="laptop:w-[60%] ">
+        <DocsArticle>
           {renderTitle('Get started')}
           <Separator />
           <p className={commonTextStyle}>
@@ -122,7 +121,7 @@ export default function GetStarted() {
               />
             ))}
           </div>
-        </Article>
+        </DocsArticle>
       </main>
     </>
   );
