@@ -2,8 +2,9 @@ import { FC, useState } from 'react';
 import { IconType } from 'react-icons';
 import { HiOutlineClipboard } from 'react-icons/hi';
 import clsx from 'clsx';
-import { IconButton } from '../IconButton';
+import { IconButton } from '@/components';
 import { useCopyableText } from '@/hooks';
+import Tooltip from './Tooltip';
 
 type TextVariants = 'italic' | 'normal';
 
@@ -25,7 +26,7 @@ const CopyableText: FC<CopyableTextProps> = ({
   Icon = HiOutlineClipboard,
 }) => {
   const [iconVisible, setIconVisible] = useState(false);
-  const { isCopied, isCopying, isError, onCopyButtonClick } =
+  const { isCopied, isError, showTooltip, closeTooltip, onCopyButtonClick } =
     useCopyableText(text);
 
   return (
@@ -46,11 +47,26 @@ const CopyableText: FC<CopyableTextProps> = ({
         {text}
       </span>
       {iconVisible && (
-        <IconButton
-          className="absolute w-9 h-9 top-1 right-1"
-          iconColor={iconColor}
-          Icon={Icon}
-          onClick={onCopyButtonClick}
+        <>
+          <IconButton
+            className="absolute w-9 h-9 top-1 right-1"
+            disabled={closeTooltip}
+            iconColor={iconColor}
+            Icon={Icon}
+            onClick={onCopyButtonClick}
+          />
+        </>
+      )}
+      {showTooltip && (
+        <Tooltip
+          willClose={closeTooltip}
+          text={
+            isCopied
+              ? 'copied to clipboard!'
+              : isError
+              ? 'there was an error while copying'
+              : ''
+          }
         />
       )}
     </div>
