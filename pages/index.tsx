@@ -53,14 +53,14 @@ export default function Home() {
               href="https://github.com/Amaury-Vasquez/facile-ui"
               target="_blank"
               Icon={FaGithub}
-              className="h-8 w-8"
+              className="h-12 w-12"
             />
             <IconButtonLink
               href="https://www.linkedin.com/in/amaury-vasquez-9a1b3a240/"
               target="_blank"
               Icon={FaLinkedin}
               iconColor="#0a66c2"
-              className="h-8 w-8"
+              className="h-12 w-12"
             />
           </div>
           <p className="text-[16px] leading-9 text-center mt-6">
