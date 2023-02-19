@@ -95,7 +95,7 @@ export default function GetStarted() {
             of them, I advice you to copy the components folder inside your
             project. All of them are already exported on the index file.
           </p>
-          <Separator className="mt-2" />
+          <Separator className="mt-2 mb-2" />
           {renderTitle('Additional steps')}
           <p className={commonTextStyle}>
             If you are interested on using Facile UI components, please give a
