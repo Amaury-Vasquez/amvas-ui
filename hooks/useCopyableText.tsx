@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-export const useCopyableText = (text: string) => {
+export const useCopyableText = (text: string, time: number = 2000) => {
   const [isCopied, setIsCopied] = useState(false);
   const [isError, setIsError] = useState(false);
-  const [isCopying, setIsCopying] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false);
+  const [closeTooltip, setClose] = useState(false);
 
   async function copyTextToClipboard() {
     try {
@@ -16,10 +17,26 @@ export const useCopyableText = (text: string) => {
   }
 
   async function onCopyButtonClick() {
-    setIsCopying(true);
     await copyTextToClipboard();
-    setIsCopying(false);
   }
 
-  return { isCopied, isCopying, isError, onCopyButtonClick };
+  useEffect(() => {
+    if ((isCopied || isError) && !showTooltip) setShowTooltip(true);
+  }, [isCopied, isError, showTooltip, time]);
+
+  // useEffect(() => {
+  if (showTooltip && !closeTooltip) {
+    setTimeout(() => {
+      setClose(true);
+      setIsCopied(false);
+      setIsError(false);
+      setTimeout(() => {
+        setShowTooltip(false);
+        setClose(false);
+      }, 200);
+    }, time);
+  }
+  // }, [showTooltip, closeTooltip, time]);
+
+  return { isCopied, isError, closeTooltip, showTooltip, onCopyButtonClick };
 };
