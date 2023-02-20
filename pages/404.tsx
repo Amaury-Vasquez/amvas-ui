@@ -7,13 +7,13 @@ const NotFound = () => {
   const router = useRouter();
   return (
     <article className="flex items-center justify-center flex-col h-full w-full gap-4">
-      <h1 className="text-4xl font-semibold text-violet-500">
+      <h1 className="text-4xl font-semibold text-primary-light">
         There was an error!
       </h1>
       <p className="text-2xl font-semibold text-slate-800">
         The page you are looking for does not exist.
       </p>
-      <TbError404 className="h-52 w-52 text-violet-500" />
+      <TbError404 className="h-52 w-52 text-primary-light" />
       <div className="flex flex-col items-center justify-center gap-4 w-fit">
         <Link href="/">
           <Button className="!px-8" variant="primary">
@@ -22,7 +22,7 @@ const NotFound = () => {
         </Link>
         <Button
           className="!w-full"
-          variant="secondary"
+          variant="primary-dark"
           onClick={() => router.back()}
         >
           Go Back

@@ -8,7 +8,7 @@ const BounceOverview: FC = () => (
       <Bounce size="md" />
       <Bounce size="lg" />
     </div>
-    <Bounce size="lg" backgroundColor="violet-500" />
+    <Bounce size="lg" backgroundColor="primary-light" />
   </div>
 );
 

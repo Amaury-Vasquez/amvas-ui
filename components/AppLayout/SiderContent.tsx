@@ -1,10 +1,11 @@
 import { FC } from 'react';
+import { useRouter } from 'next/router';
 import { useComponentList } from '@/hooks';
 import { Accordion, NavigationLink, NavigationMenu } from '@/components';
 
 const SiderContent: FC = () => {
   const { navigationList } = useComponentList();
-  const linkClass = 'w-full px-4 py-2 bg-violet-700 text-base font-semibold';
+  const linkClass = 'w-full px-4 py-2 bg-primary-dark text-base font-semibold';
   return (
     <div className="transition-[height] duration-1000 ease h-auto w-auto p-0 m-0">
       <NavigationLink
@@ -25,7 +26,9 @@ const SiderContent: FC = () => {
             <NavigationMenu
               links={section.components.map((component) => ({
                 text: component.name,
-                href: component.path,
+                href: `components/${section.classification
+                  .toLowerCase()
+                  .replace(' ', '-')}/${component.path}`,
               }))}
             />
           }

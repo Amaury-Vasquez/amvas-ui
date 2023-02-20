@@ -1,7 +1,7 @@
 import { FC, HTMLProps, ReactNode } from 'react';
 import clsx from 'clsx';
 
-type ButtonVariants = 'primary' | 'secondary' | 'base';
+type ButtonVariants = 'primary' | 'primary-dark' | 'base';
 
 export interface ButtonProps extends HTMLProps<HTMLButtonElement> {
   className?: string;
@@ -22,11 +22,11 @@ const Button: FC<ButtonProps> = ({
   const getVariantStyle = (variant: ButtonVariants) => {
     switch (variant) {
       case 'primary':
-        return 'w-auto text-white bg-violet-600 rounded';
-      case 'secondary':
-        return 'w-auto border border-violet-500 text-violet-500 rounded';
+        return 'w-auto text-white bg-primary rounded';
+      case 'primary-dark':
+        return 'w-auto border border-primary-light text-primary-light rounded';
       case 'base':
-        return 'text-violet-500';
+        return 'text-primary-light';
     }
   };
 

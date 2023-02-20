@@ -38,7 +38,7 @@ export default function Home() {
             <Anchor
               className="px-8 font-semibold"
               href="/components"
-              variant="secondary"
+              variant="primary-dark"
             >
               Components overview
             </Anchor>

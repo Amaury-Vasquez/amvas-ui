@@ -22,6 +22,14 @@ const AppLayout: FC<LayoutProps> = ({ children, font }) => {
   const handleBlur = () => {
     if (isActive) handleClick();
   };
+  const getHeaderTitle = () => {
+    if (router.pathname === '/') return 'Facile UI';
+    else if (router.pathname === '/404') return 'Facile UI - Page not found';
+    else {
+      const route = router.pathname.split('/');
+      return capitalize(route[route.length - 1].split('-').join(' '));
+    }
+  };
 
   return (
     <div
@@ -34,12 +42,7 @@ const AppLayout: FC<LayoutProps> = ({ children, font }) => {
         left={<Menu isActive={isActive} onMenuClick={handleClick} />}
         middle={
           <span className="flex items-center justify-center w-fit h-full text-xl text-neutral-800">
-            {router.pathname === '/'
-              ? 'Facile UI'
-              : router.pathname !== '_error' &&
-                capitalize(
-                  router.pathname.replace('/', '').split('-').join(' ')
-                )}
+            {getHeaderTitle()}
           </span>
         }
         right={<HeaderLinks />}

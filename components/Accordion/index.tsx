@@ -29,14 +29,14 @@ const Accordion: FC<AccordionProps> = ({
     <div
       className={clsx(
         'w-full h-auto flex flex-col relative',
-        bordered && 'border border-violet-600 border-solid',
+        bordered && 'border border-primary border-solid',
         className
       )}
     >
       <button
         className={clsx(
           'flex items-center justify-center gap-x-[2px] capitalize text-inherit font-semibold px-4 py-2 w-full',
-          filled && 'bg-violet-800 text-white'
+          filled && 'bg-primary-darker text-white'
         )}
         disabled={willClose}
         onClick={handleClick}

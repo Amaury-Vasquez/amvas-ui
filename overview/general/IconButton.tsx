@@ -28,7 +28,7 @@ export const IconButtonOverview: FC = () => (
     <div className="flex gap-4 justify-center items-center">
       <IconButton className="h-10 w-10 text-red-800" Icon={FaNpm} />
       <IconButton className="h-10 w-10" Icon={HiOutlineMenu} />
-      <IconButton className="h-10 w-10 text-violet-600" Icon={FaLink} />
+      <IconButton className="h-10 w-10 text-primary" Icon={FaLink} />
       <IconButton className="h-10 w-10" Icon={AiOutlineClose} />
     </div>
   </div>

@@ -3,7 +3,7 @@ import Link, { LinkProps } from 'next/link';
 import clsx from 'clsx';
 import { TargetTypes } from '@/interfaces';
 
-type LinkVariants = 'primary' | 'secondary' | 'base';
+type LinkVariants = 'primary' | 'primary-dark' | 'base';
 
 export interface AnchorProps extends LinkProps {
   isNextLink?: boolean;
@@ -27,11 +27,11 @@ const Anchor: FC<AnchorProps> = ({
   const getVariantStyle = (variant: LinkVariants) => {
     switch (variant) {
       case 'primary':
-        return 'p-2 w-auto text-white bg-violet-600 rounded';
-      case 'secondary':
-        return 'p-2 w-auto border border-violet-500 text-violet-500 rounded';
+        return 'p-2 w-auto text-white bg-primary rounded';
+      case 'primary-dark':
+        return 'p-2 w-auto border border-primary-light text-primary-light rounded';
       case 'base':
-        return 'text-violet-500';
+        return 'text-primary-light';
     }
   };
 
@@ -39,7 +39,7 @@ const Anchor: FC<AnchorProps> = ({
     <Link
       href={href}
       className={clsx(
-        'text-base text-center',
+        'text-center',
         underlined && 'underline underline-offset-2',
         getVariantStyle(variant),
         className

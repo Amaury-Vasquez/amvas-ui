@@ -27,8 +27,8 @@ const NavigationMenu: FC<NavigationMenuProps> = ({
       {links.map((link, i) => (
         <NavigationLink
           className={clsx(
-            'w-full px-4 py-2 bg-violet-700 text-base font-semibold',
-            i < links.length - 1 && 'border-b border-violet-600'
+            'w-full px-4 py-2 bg-primary-dark text-base font-semibold',
+            i < links.length - 1 && 'border-b border-primary'
           )}
           key={i}
           {...link}

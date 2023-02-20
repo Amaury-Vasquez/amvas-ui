@@ -11,6 +11,10 @@ module.exports = {
       colors: {
         'transparent-black': 'rgba(0, 0, 0, 0.3)',
         'transparent-white': 'rgba(255, 255, 255, 0.3)',
+        primary: '#3b82f6',
+        'primary-dark': '#2563eb',
+        'primary-darker': '#1d4ed8',
+        'primary-light': '#60a5fa',
       },
       keyframes: {
         'scroll-down': {
