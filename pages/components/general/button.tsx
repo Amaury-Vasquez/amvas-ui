@@ -91,8 +91,8 @@ const ButtonPage = () => {
         <p className={commonTextStyle}>
           The button component extends the props given by HtmlButtonElement in
           React, so you can use all the props that are available by default on a
-          normal <strong>button</strong> tag. Also, there are some extra props
-          included for optional button styling.
+          normal <strong>button</strong> html tag. Also, there are some extra
+          props included for optional button styling.
         </p>
         <ApiTable api={api} />
       </DocsArticle>
