@@ -30,12 +30,12 @@ const ApiTable: FC<ApiTableProps> = ({ api }) => {
         )}
       >
         {isArray ? (
-          <span className="flex items-center justify-center gap-2">
+          <span className="flex items-center justify-center space-x-1">
             {text.map((item, i) => (
               <Fragment key={item + i}>
                 <span className={style}>{item}</span>
                 {i < text.length - 1 && (
-                  <span className="text-sm"> {' | '} </span>
+                  <span className="text-xs"> {' | '} </span>
                 )}
               </Fragment>
             ))}
