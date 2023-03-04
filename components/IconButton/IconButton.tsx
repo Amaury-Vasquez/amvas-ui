@@ -1,11 +1,12 @@
 import { FC, HTMLProps } from 'react';
 import clsx from 'clsx';
+import { ButtonTypes } from '@/components';
 import { IconCommonProps } from '.';
 
 export interface IconButtonProps
   extends HTMLProps<HTMLButtonElement>,
     IconCommonProps {
-  hoverColor?: string;
+  type?: ButtonTypes;
 }
 
 const IconButton: FC<IconButtonProps> = ({
@@ -24,7 +25,7 @@ const IconButton: FC<IconButtonProps> = ({
         `hover:${hoverColor}`,
         className
       )}
-      type="button"
+      type={type}
       {...props}
     >
       <Icon color={iconColor} className="w-full h-full" />
