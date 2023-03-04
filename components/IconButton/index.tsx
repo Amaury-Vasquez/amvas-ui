@@ -3,6 +3,7 @@ import { IconType } from 'react-icons';
 export interface IconCommonProps {
   className?: string;
   Icon: IconType;
+  hoverColor?: string;
   iconColor?: string;
 }
 
