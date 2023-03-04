@@ -5,7 +5,8 @@ import { Accordion, NavigationLink, NavigationMenu } from '@/components';
 
 const SiderContent: FC = () => {
   const { navigationList } = useComponentList();
-  const linkClass = 'w-full px-4 py-2 bg-primary-dark text-base font-semibold';
+  const linkClass =
+    'w-full px-4 py-2 bg-primary-darker text-base font-semibold';
   return (
     <div className="transition-[height] duration-1000 ease h-auto w-auto p-0 m-0">
       <NavigationLink
