@@ -27,7 +27,7 @@ const SiderContent: FC = () => {
             <NavigationMenu
               links={section.components.map((component) => ({
                 text: component.name,
-                href: `components/${section.classification
+                href: `/components/${section.classification
                   .toLowerCase()
                   .replace(' ', '-')}/${component.path}`,
               }))}
