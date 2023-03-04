@@ -6,6 +6,7 @@ import clsx from 'clsx';
 
 interface AccordionProps {
   className?: string;
+  disabled?: boolean;
   toggleableContent: ReactNode;
   bordered?: boolean;
   text: string;
@@ -21,6 +22,7 @@ const Accordion: FC<AccordionProps> = ({
   active = false,
   filled = true,
   bordered = false,
+  disabled = false,
   Icon = FaAngleRight,
 }) => {
   const { isActive, willClose, handleClick } = useToggle(active);
@@ -38,7 +40,7 @@ const Accordion: FC<AccordionProps> = ({
           'flex items-center justify-center gap-x-[2px] capitalize text-inherit font-semibold px-4 py-2 w-full',
           filled && 'bg-primary-darker text-white'
         )}
-        disabled={willClose}
+        disabled={willClose || disabled}
         onClick={handleClick}
       >
         {text}
