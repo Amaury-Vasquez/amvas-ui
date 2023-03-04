@@ -2,13 +2,13 @@ import { FC, HTMLProps, ReactNode } from 'react';
 import clsx from 'clsx';
 
 type ButtonVariants = 'primary' | 'secondary' | 'base';
-
+export type ButtonTypes = 'button' | 'submit' | 'reset';
 export interface ButtonProps extends HTMLProps<HTMLButtonElement> {
   className?: string;
   children: ReactNode;
   variant?: ButtonVariants;
   underlined?: boolean;
-  type?: 'button' | 'submit' | 'reset';
+  type?: ButtonTypes;
 }
 
 const Button: FC<ButtonProps> = ({
