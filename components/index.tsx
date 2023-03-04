@@ -4,7 +4,7 @@ export { default as Accordion } from './Accordion';
 export * from './Article';
 export { default as Anchor } from './Anchor';
 export { default as Avatar } from './Avatar';
-export { default as Button } from './Button';
+export { default as Button, type ButtonTypes } from './Button';
 export { default as Card } from './Card';
 export { default as Carousel } from './Carousel';
 export { default as CodeBlock } from './CodeBlock';
