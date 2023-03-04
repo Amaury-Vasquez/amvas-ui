@@ -1,6 +1,5 @@
 import { FC } from 'react';
-import Link from 'next/link';
-import { FaGithub, FaNpm } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 import { IconButtonLink } from '@/components';
 
 const HeaderLinks: FC = () => (
