@@ -13,6 +13,7 @@ const IconButtonLink: FC<IconButtonLinkProps> = ({
   iconColor,
   className,
   target = '_blank',
+  hoverColor = 'bg-gray-200',
   ...props
 }) => {
   return (
@@ -20,6 +21,7 @@ const IconButtonLink: FC<IconButtonLinkProps> = ({
       <IconButton
         tabIndex={-1}
         Icon={Icon}
+        hoverColor={hoverColor}
         iconColor={iconColor}
         className={className}
       />
