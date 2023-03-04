@@ -1,3 +1,4 @@
+export { default as ApiTable } from './ApiTable';
 export { default as AppLayout } from './AppLayout';
 export { default as Accordion } from './Accordion';
 export * from './Article';
@@ -6,6 +7,7 @@ export { default as Avatar } from './Avatar';
 export { default as Button } from './Button';
 export { default as Card } from './Card';
 export { default as Carousel } from './Carousel';
+export { default as CodeBlock } from './CodeBlock';
 export { default as CopyableText } from './CopyableText';
 export { default as Header } from './Header';
 export * from './IconButton';
