@@ -68,7 +68,6 @@ const ButtonPage = () => {
       </Head>
       <DocsArticle>
         {renderTitle('Button')}
-        <Separator />
         <p className={commonTextStyle}>
           The button component is used for actions in the application, it is not
           different from the native button element, except for the fact that it

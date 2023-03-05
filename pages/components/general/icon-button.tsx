@@ -108,7 +108,6 @@ const IconButtonPage = () => {
       </Head>
       <DocsArticle>
         {renderTitle('Icon Button')}
-        <Separator />
         <p className={commonTextStyle}>
           Icon button component is used like a regular button, but instead of
           using text as content, it shows an icon. It is used for actions or
