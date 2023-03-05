@@ -1,8 +1,12 @@
 import { FC } from 'react';
+import { Separator } from '@/components';
 import Article, { ArticleProps } from './Article';
 
 export const renderTitle = (text: string) => (
-  <h1 className="text-2xl mb-2 font-semibold"> {text} </h1>
+  <>
+    <h1 className="text-2xl mb-2 font-semibold"> {text} </h1>
+    <Separator />
+  </>
 );
 
 export const renderSubtitle = (text: string) => (
