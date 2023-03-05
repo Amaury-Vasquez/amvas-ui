@@ -19,7 +19,7 @@ interface CopyableTextProps {
 
 const CopyableText: FC<CopyableTextProps> = ({
   color,
-  iconColor = '#65a9fa',
+  iconColor = '#2563eb',
   className,
   variant = 'normal',
   text,
