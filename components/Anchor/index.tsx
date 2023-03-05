@@ -6,7 +6,6 @@ import { TargetTypes } from '@/interfaces';
 type LinkVariants = 'primary' | 'primary-dark' | 'base';
 
 export interface AnchorProps extends LinkProps {
-  isNextLink?: boolean;
   className?: string;
   children: ReactNode;
   href: string;
@@ -18,7 +17,6 @@ export interface AnchorProps extends LinkProps {
 const Anchor: FC<AnchorProps> = ({
   className,
   children,
-  isNextLink = true,
   href,
   variant = 'base',
   underlined = false,
@@ -31,7 +29,7 @@ const Anchor: FC<AnchorProps> = ({
       case 'primary-dark':
         return 'p-2 w-auto border border-primary-light text-primary-light rounded';
       case 'base':
-        return 'text-primary-light';
+        return 'text-primary';
     }
   };
 
