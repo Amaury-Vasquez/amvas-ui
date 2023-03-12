@@ -16,7 +16,7 @@ export const renderSubtitle = (text: string) => (
 export const commonTextStyle = 'my-2 text-lg text-justify';
 
 const DocsArticle: FC<ArticleProps> = (props) => (
-  <main className="w-full h-auto p-0 m-0 flex justify-center">
+  <main className="w-full h-auto p-0 m-0 flex justify-center animate-fade-in">
     <Article className="laptop:w-[60%] text-justify" {...props} />
   </main>
 );
