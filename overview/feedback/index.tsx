@@ -1,5 +1,5 @@
-import { ComponentSection } from '@/overview';
-
+// import { ComponentSection } from '@/overview';
+export {};
 // export const feedbackSection: ComponentSection = {
 //   classification: 'feedback',
 //   components: [
