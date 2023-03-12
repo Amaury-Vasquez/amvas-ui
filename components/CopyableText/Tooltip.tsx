@@ -23,10 +23,10 @@ const Tooltip: FC<TooltipProps> = ({ text, className, willClose }) => (
       className
     )}
   >
-    <span className="bg-violet-100 p-2 rounded-md text-slate-600 relative z-30">
+    <span className="bg-blue-100 p-2 rounded-md text-slate-600 relative z-30">
       {text}
     </span>
-    <span className="w-4 h-4 bg-violet-100 self-end rotate-45 z-20 mr-3 mt-[-12px]" />
+    <span className="w-4 h-4 bg-blue-100 self-end rotate-45 z-20 mr-3 mt-[-12px]" />
   </div>
 );
 
