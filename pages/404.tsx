@@ -22,7 +22,7 @@ const NotFound = () => {
         </Link>
         <Button
           className="!w-full"
-          variant="primary-dark"
+          variant="secondary"
           onClick={() => router.back()}
         >
           Go Back
