@@ -17,6 +17,10 @@ module.exports = {
         'primary-light': '#60a5fa',
       },
       keyframes: {
+        skeleton: {
+          '0%': { backgroundColor: '#e1e4e8' },
+          '100%': { backgroundColor: 'primary-light' },
+        },
         'scroll-down': {
           '0%': { transform: 'translateY(-100%)', transform: 'scaleY(0)' },
           '100%': { transform: 'translateY(0)', transform: 'scaleY(1)' },
@@ -71,6 +75,7 @@ module.exports = {
         },
       },
       animation: {
+        skeleton: 'skeleton 1s ease-in-out infinite alternate',
         'to-bottom': 'scroll-down 0.3s ease',
         'to-top': 'scroll-up 0.3s ease',
         'appear-right': 'appear-right 0.3s ease',
