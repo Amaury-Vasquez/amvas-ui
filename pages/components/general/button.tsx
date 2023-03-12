@@ -7,7 +7,6 @@ import {
   DocsArticle,
   renderTitle,
   renderSubtitle,
-  Separator,
 } from '@/components';
 import { ComponentApi } from '@/interfaces';
 
