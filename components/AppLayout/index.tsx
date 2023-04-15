@@ -1,15 +1,15 @@
+import { NextFont } from '@next/font';
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
-import { NextFont } from '@next/font';
 import { FC } from 'react';
 import { FaReact } from 'react-icons/fa';
+import CloseButton from './CloseButton';
 import HeaderLinks from './HeaderLinks';
 import Menu from './Menu';
 import SiderContent from './SiderContent';
 import { Header, Modal, NavigationLink, Sider } from '@/components';
 import { useToggle } from '@/hooks';
 import { capitalize } from '@/utils/string';
-import CloseButton from './CloseButton';
 
 interface LayoutProps {
   children: React.ReactNode;
